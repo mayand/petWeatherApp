@@ -3,10 +3,11 @@ var app = angular.module("petWeatherApp", ['ngMaterial', 'ngMessages']);
 app.controller('homePageController', ['$scope', '$http', '$mdDialog', '$rootScope', '$document','$timeout',
 function($scope, $http, $mdDialog, $rootScope, $document, $timeout){
     /*Main Controller*/
+    var corsURL = "https://cors-anywhere.herokuapp.com/";
     var configFile = "config/default.json";
     var petStoreURL = "https://floating-fortress-31563.herokuapp.com/pets/";
     var darkSkyAPIKey = "bbfd3806cc555448889dd7942e99ef0e";
-    var darkSkyURL = "https://api.darksky.net/forecast";
+    var darkSkyURL = corsURL+"https://api.darksky.net/forecast";
     var googleAPIKey = "AIzaSyBNQH_NR64mJTSNzV8Cnkrev-a_RZk2edA";
     var googleGeocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?";
     var headers = {
@@ -112,6 +113,7 @@ function($scope, $http, $mdDialog, $rootScope, $document, $timeout){
         console.log("PetId"+$rootScope.petId);
         $scope.petStoreDetailData = [];
         //Below code block to get the PetStore Detail followed by Weather Detail (nested promise)
+        console.log(headers);
         $http.get(petStoreDetailURL).then(function successRetrival(petStoreResponse){
             $scope.petStoreDetailData = petStoreResponse.data;
             $http.get(darkSkyURL+"/"+darkSkyAPIKey+"/"+petStoreResponse.data.latitude+","+petStoreResponse.data.longitude,
