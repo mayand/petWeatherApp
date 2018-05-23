@@ -1,0 +1,22 @@
+<md-dialog class="md-dialog--2" aria-label="Pet Details" style="background-color:rgb(63,81,181); color:white">
+        <form ng-cloak>
+          <md-toolbar>
+            <div class="md-toolbar-tools">
+              <h2>{{textContent}} {{textContentLocation}}</h2>
+            </div>
+          </md-toolbar>
+      
+          <md-dialog-content>
+            <div class="md-dialog-content">
+                <img class="pet_img" ng-src={{image}}>
+            </div>
+          </md-dialog-content>
+      
+          <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised md-accent md-hue-3" aria-label="Add" ng-click="cancel()">
+                Close
+        </md-button>
+          </md-dialog-actions>
+        </form>
+      </md-dialog>

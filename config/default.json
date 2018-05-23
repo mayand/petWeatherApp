@@ -1,0 +1,8 @@
+{
+    "petStoreURL":"http://localhost:3000/pets",
+    "darkSkyAPIKey":"darkSkyAPIKey",
+    "darkSkyURL":"https://api.darksky.net/forecast",
+    "googleAPIKey":"AIzaSyBNQH_NR64mJTSNzV8Cnkrev-a_RZk2edA",
+    "googleGeocodeURL":"https://maps.googleapis.com/maps/api/geocode/json?"
+
+}

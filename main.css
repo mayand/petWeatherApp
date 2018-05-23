@@ -1,0 +1,43 @@
+
+  .md-sidenav-left--2{
+    width: 500px;
+    max-width: 500px;
+  }
+  .md-toolbar-tools--2 {
+    font-size: 16px;
+    font-weight: inherit;
+    margin: inherit;
+    color: inherit;
+    letter-spacing: 0.005em;
+    box-sizing: border-box;
+    font-weight: 400;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 64px;
+    max-height: 64px;
+    padding: 0 16px;
+    margin: 0; 
+  }
+  .md-subhead--2{
+    text-align: right
+  }
+  .pet_img{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .md-dialog--2{
+    max-width: 40%;
+    max-height: 90%;
+  }
