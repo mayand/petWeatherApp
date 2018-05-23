@@ -9,6 +9,12 @@ function($scope, $http, $mdDialog, $rootScope, $document, $timeout){
     var darkSkyURL = "https://api.darksky.net/forecast";
     var googleAPIKey = "AIzaSyBNQH_NR64mJTSNzV8Cnkrev-a_RZk2edA";
     var googleGeocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?";
+    var headers = {
+        // 'Authorization': 'Basic ' + btoa(username + ":" + password),
+       'Access-Control-Allow-Origin': true,
+       'Content-Type': 'application/json; charset=utf-8',
+       "X-Requested-With": "XMLHttpRequest"
+         };
     
     //Start: get the Cat & Dog breeds using local JSON 
     $scope.catBreeds = []; 
@@ -108,7 +114,8 @@ function($scope, $http, $mdDialog, $rootScope, $document, $timeout){
         //Below code block to get the PetStore Detail followed by Weather Detail (nested promise)
         $http.get(petStoreDetailURL).then(function successRetrival(petStoreResponse){
             $scope.petStoreDetailData = petStoreResponse.data;
-            $http.get(darkSkyURL+"/"+darkSkyAPIKey+"/"+petStoreResponse.data.latitude+","+petStoreResponse.data.longitude)
+            $http.get(darkSkyURL+"/"+darkSkyAPIKey+"/"+petStoreResponse.data.latitude+","+petStoreResponse.data.longitude,
+        {headers})
             .then(function success(weatherResponse){
                 if (weatherResponse.data.currently.icon === "rain"){
                     $scope.weatherCondition = "RAINY";
