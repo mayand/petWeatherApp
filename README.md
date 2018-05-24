@@ -33,6 +33,12 @@ npm http-server
 * (https://cloud.google.com/maps-platform/) - Google Maps API
 * (https://darksky.net/app) - Dark Sky API for weather 
 
+## Known Limitations/ defects
+
+* As this was a very lightweight app, hence additional effort was not taken to do pagination or "infinite scroll"
+* Because the layout has list and a google maps pane, hence by default it would not be compatible with the browsers of the cell phone
+* Minor performance issue when a dialog window opens for the selected pet. This is due to the known CORS issue in darksky API and the fix to bypass it.
+
 ## Authors
 
 Mayand Tiwari
