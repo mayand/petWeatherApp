@@ -13,17 +13,16 @@ The App can be launched using the URL https://petweatherapp.herokuapp.com/
 
 ### Prerequisites
 
-node.js
-mongoDB
-node http-server
+* node.js
+* mongoDB
 
 
 ### Installing
 
-fork the github then install the below nodejs modules
-npm install angular
-npm install angular-material
-npm http-server
+Clone the github repository then install the below nodejs modules
+* npm install angular
+* npm install angular-material
+* npm http-server
 
 ## Built With
 
